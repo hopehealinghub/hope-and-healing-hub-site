@@ -697,3 +697,29 @@
     .pillar-grid{grid-template-columns:1fr;}
     .quals-grid{grid-template-columns:1fr;}
   }
+
+  /* ---- Meet Hope preview (homepage) ---- */
+  .meet-preview {
+    background: var(--cream, #F3EFE8);
+    padding: 72px 0;
+  }
+  .meet-preview .wrap {
+    max-width: 1080px; margin: 0 auto; padding: 0 24px;
+    display: grid; grid-template-columns: 200px 1fr; gap: 40px; align-items: center;
+  }
+  .meet-preview img {
+    width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(51,47,59,0.12);
+  }
+  .meet-preview .eyebrow { display:block; margin-bottom: 10px; }
+  .meet-preview h2 { margin: 0 0 12px; }
+  .meet-preview p.lead-small {
+    font-family:'Inter',sans-serif; font-size:16px; line-height:1.6;
+    color: var(--ink-soft,#6B6660); max-width: 560px; margin: 0 0 20px;
+  }
+  .meet-preview .btn-ghost { display:inline-block; }
+
+  @media (max-width: 640px) {
+    .meet-preview .wrap { grid-template-columns: 1fr; text-align:center; }
+    .meet-preview img { max-width: 220px; margin: 0 auto; }
+  }
