@@ -355,7 +355,6 @@
   .about-stats .label{font-size:12.5px; color:#D6D0DE; font-weight:600;}
 
   /* ---------- SERVICES ---------- */
-  .services{background:var(--cream);}
   .service-grid{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
@@ -405,6 +404,7 @@
   .services-note a{color:var(--coral); text-decoration:underline; font-weight:600;}
 
   /* ---------- RESOURCES ---------- */
+  .services{background:var(--cream);}
   .resources{background:var(--cream);}
   .resource-grid{
     display:grid;
@@ -707,7 +707,6 @@
       #E4EDE5 88%,
       var(--cream) 100%
     );
-    padding: 88px 0;
   }
   .meet-preview .wrap {
     max-width: 1080px; margin: 0 auto; padding: 0 32px;
