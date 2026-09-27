@@ -749,3 +749,13 @@
     .meet-preview .wrap { grid-template-columns: 1fr; text-align:center; }
     .meet-preview .photo-frame { max-width: 220px; margin: 0 auto; }
   }
+
+  /* ---- What we treat cards: italic hook line above the description ---- */
+  .card-hook {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 17px;
+    color: var(--ink);
+    margin: 4px 0 8px;
+  }
