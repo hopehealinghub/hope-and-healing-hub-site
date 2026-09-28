@@ -1,14 +1,14 @@
   :root{
-    --gold:#B9A7E1;       /* Hope Lavender — primary accent */
-    --gold-deep:#8A6FC0;  /* deeper lavender — buttons, hover states */
-    --teal:#AFC5B2;       /* Hub Sage — supporting accent */
-    --teal-deep:#332F3B;  /* charcoal-violet — dark sections */
+    --gold:#B9A7E1;       /* Hope Lavender: primary accent */
+    --gold-deep:#8A6FC0;  /* deeper lavender: buttons, hover states */
+    --teal:#AFC5B2;       /* Hub Sage: supporting accent */
+    --teal-deep:#332F3B;  /* charcoal-violet: dark sections */
     --coral:#8A6FC0;      /* unified with lavender-deep for one consistent accent */
     --cream:#F3EFE8;      /* Warm Cream */
     --sand:#EAE6FD;       /* Soft Lilac */
-    --ink:#333333;        /* Charcoal — body text */
+    --ink:#333333;        /* Charcoal: body text */
     --ink-soft:#6B6660;   /* muted charcoal for secondary text */
-    --line:#D6CCC0;       /* Warm Taupe — rules, borders */
+    --line:#D6CCC0;       /* Warm Taupe: rules, borders */
     --radius-lg: 28px;
     --radius-md: 18px;
     --radius-sm: 10px;
@@ -758,3 +758,36 @@
     color: var(--ink);
     margin: 4px 0 8px;
   }
+
+  /* ---- Contact page: crisis callout (this page's one deliberate pink moment) ---- */
+  .crisis-callout {
+    background: #FBF0F5;
+    border: 1.5px solid #E3B8CE;
+    border-radius: var(--radius-md);
+    padding: 32px 36px;
+  }
+  .crisis-callout h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #8C5C93;
+    margin: 0 0 10px;
+  }
+  .crisis-callout p {
+    font-size: 15px;
+    color: var(--ink-soft);
+    margin: 0 0 18px;
+    max-width: 640px;
+  }
+  .crisis-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .crisis-list a {
+    font-size: 15px;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .crisis-list a:hover { text-decoration: underline; }
+  .crisis-list a strong { color: #8C5C93; }
