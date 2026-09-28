@@ -130,13 +130,22 @@
   .quiet-crisis-note p:last-child { margin-bottom: 0; }
   .quiet-crisis-note a { color: var(--ink); font-weight: 600; }
 
-  .closing-cta { padding: 70px 0 100px; text-align: center; }
-  .closing-cta .wrap { max-width: 560px; }
-  .closing-cta p.big-quote {
-    font-family: 'Playfair Display', serif; font-style: italic; font-size: 22px;
-    color: var(--ink); margin: 0 0 28px;
+  .closing-cta {
+    padding: 90px 0;
+    background: linear-gradient(180deg, var(--cream) 0%, #EFE7FA 25%, #EFE7FA 75%, var(--cream) 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
   }
-  .closing-cta .tagline { font-size: 13px; color: var(--ink-soft); margin-top: 18px; letter-spacing: 0.02em; }
+  .closing-cta .wrap { max-width: 560px; position: relative; z-index: 1; }
+  .closing-cta .emblem {
+    width: 150px; height: auto; margin: 0 auto 28px; display: block;
+    opacity: 0.92;
+  }
+  .closing-cta p.big-quote {
+    font-family: 'Playfair Display', serif; font-style: italic; font-size: 24px;
+    color: var(--ink); margin: 0 0 32px;
+  }
 
   @media (max-width: 640px) {
     .contact-quote-hero { padding: 72px 0 50px; }
@@ -165,7 +174,6 @@
     <div class="wrap">
       <span class="eyebrow">Ready when you are</span>
       <h1>You don't need to have it all figured out.</h1>
-      <p class="subline">Just start wherever you are.</p>
       <p class="lead">Whether you're ready to join the waitlist, have a question, or just want to find out a little more, no pressure, and no perfect first message required.</p>
 
       <div class="reassure-card">
@@ -239,7 +247,7 @@
           </div>
           <div class="consent-row">
             <input type="checkbox" id="consent" name="consent" required>
-            <label for="consent">I understand my information will be used only to respond to this enquiry, and won't be shared with anyone else.</label>
+            <label for="consent">I understand my information will be used to respond to my enquiry, in line with the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</label>
           </div>
           <button type="submit" class="btn-primary">Send my enquiry →</button>
           <p class="form-note">Sending this form doesn't commit you to starting therapy, and everything you share is treated confidentially.</p>
@@ -248,7 +256,7 @@
 
       <div id="formConfirm" style="display:none;">
         <h3>Thank you, your message is in.</h3>
-        <p>I'll get back to you within a couple of business days.</p>
+        <p>I'll get back to you within 2 working days.</p>
       </div>
     </div>
   </section>
@@ -281,7 +289,7 @@
               <span class="step-tap-hint">Tap to see more →</span>
             </div>
             <div class="step-flip-face step-flip-back">
-              <p>Usually within a couple of business days, to acknowledge your enquiry and talk through the next step.</p>
+              <p>Usually within 2 working days, to acknowledge your enquiry and talk through the next step.</p>
             </div>
           </div>
         </div>
@@ -334,7 +342,7 @@
       </div>
       <div class="faq-item" data-faq>
         <div class="faq-q"><span>How quickly will you reply?</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
-        <div class="faq-a"><p>Usually within 2 business days. Messages sent outside working hours will be picked up when I'm next available.</p></div>
+        <div class="faq-a"><p>Usually within 2 working days. Messages sent outside working hours will be picked up when I'm next available.</p></div>
       </div>
       <div class="faq-item" data-faq>
         <div class="faq-q"><span>How much do sessions cost?</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
@@ -355,6 +363,7 @@
 
   <section class="closing-cta">
     <div class="wrap">
+      <img src="assets/emblem.png" alt="" class="emblem" aria-hidden="true">
       <p class="big-quote">"I think I might need some support." That's enough.</p>
       <a href="#top" class="btn-primary" id="backToForm">Start your enquiry →</a>
     </div>
@@ -375,6 +384,7 @@
         <a href="index.html#services">Services</a>
         <a href="resources/index.html">Resources</a>
         <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
