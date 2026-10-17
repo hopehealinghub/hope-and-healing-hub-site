@@ -68,10 +68,10 @@
   .hub-storytelling h2 { margin: 14px 0 10px; }
   .hub-storytelling .intro { color: var(--ink-soft); max-width: 480px; margin: 0 auto 60px; }
   .hub-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 900px; margin: 0 auto; }
-  .hub-col .hub-word { font-family: 'Playfair Display', serif; font-weight:500; font-size:var(--fs-h2); margin-bottom: 12px; }
-  .hub-col:nth-child(1) .hub-word { color: var(--gold-deep); }
-  .hub-col:nth-child(2) .hub-word { color: #5F7F66; }
-  .hub-col:nth-child(3) .hub-word { color: #8C5C93; }
+  .hub-col .hub-word { font-family:'Inter',sans-serif; font-weight:800; font-size:var(--fs-h2); letter-spacing:-0.045em; line-height:1; text-transform:lowercase; color:#332F3B; margin-bottom: 14px; }
+  .hub-col:nth-child(1) .hub-word .hw { color: var(--gold-deep); }
+  .hub-col:nth-child(2) .hub-word .hw { color: #5F7F66; }
+  .hub-col:nth-child(3) .hub-word .hw { color: #8C5C93; }
   .hub-col p { font-size:var(--fs-body); color: var(--ink-soft); margin: 0; }
   .hub-vision { margin-top: 60px; font-size:var(--fs-body); color: var(--ink-soft); max-width: 560px; margin-left: auto; margin-right: auto; }
   @media (max-width: 640px) { .hub-columns { grid-template-columns: 1fr; gap: 40px; } }
@@ -88,14 +88,15 @@
 
   /* ============ TRAINING: quiet, reassuring 2x2 ============ */
   .training-quiet { padding: 80px 0; }
-  .training-quiet .wrap { max-width: 640px; }
+  .training-quiet .wrap { max-width: 900px; }
   .training-quiet .eyebrow { justify-content: center; }
   .training-quiet h2 { text-align: center; margin: 14px 0 40px; }
-  .quals-2x2 { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 40px; }
+  .quals-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px 40px; }
   .qual-item .qual-code { font-weight:600; font-size:var(--fs-sm); color: var(--ink); display: block; margin-bottom: 3px; }
   .qual-item .qual-desc { font-size:var(--fs-sm); color: var(--ink-soft); }
-  .training-note { margin-top: 36px; font-size:var(--fs-sm); color: var(--ink-soft); text-align: center; }
-  @media (max-width: 560px) { .quals-2x2 { grid-template-columns: 1fr; } }
+  .training-note { margin: 36px auto 0; max-width: 640px; font-size:var(--fs-sm); color: var(--ink-soft); text-align: center; }
+  .quals-row .qual-item { text-align: center; }
+  @media (max-width: 860px) { .quals-row { grid-template-columns: 1fr; gap: 22px; } }
 
   /* ============ A LITTLE MORE HUMAN: mirrored hero, photo on right ============ */
   .human-mirror { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; min-height: 480px; }
@@ -163,8 +164,8 @@
     <div class="wrap">
       <div class="intro-col">
         <span class="eyebrow">In the room together</span>
-        <h2>Therapy, without the therapy-speak</h2>
-        <p>I'm not here to sit silently, nod occasionally, and leave you wondering what you're supposed to do next. My approach to CBT is collaborative, practical and curious: we make sense of what's happening together, look at what's keeping things going, and experiment with ways of doing things differently.</p>
+        <h2>What it's like to work with me</h2>
+        <p>Think of it as a conversation with a plan. I bring the CBT knowledge; you bring the understanding of your own life. Together we work out what's going on, what keeps it going, and what to try next.</p>
       </div>
 
       <div class="expect-row-grid">
@@ -203,15 +204,15 @@
 
       <div class="hub-columns">
         <div class="hub-col">
-          <div class="hub-word">Hope</div>
+          <div class="hub-word"><span class="hw">H</span>ope</div>
           <p>Things can change, even when they don't feel like they can right now.</p>
         </div>
         <div class="hub-col">
-          <div class="hub-word">Healing</div>
+          <div class="hub-word"><span class="hw">H</span>ealing</div>
           <p>Progress doesn't have to be linear to count.</p>
         </div>
         <div class="hub-col">
-          <div class="hub-word">Hub</div>
+          <div class="hub-word"><span class="hw">H</span>ub</div>
           <p>Therapy is only one part of the picture.</p>
         </div>
       </div>
@@ -234,13 +235,12 @@
     <div class="wrap">
       <span class="eyebrow">Training</span>
       <h2>Training &amp; qualifications</h2>
-      <div class="quals-2x2">
-        <div class="qual-item"><span class="qual-code">PGDip</span><span class="qual-desc">Cognitive Behavioural Therapy</span></div>
-        <div class="qual-item"><span class="qual-code">PGCert</span><span class="qual-desc">Psychological Wellbeing in Practice</span></div>
-        <div class="qual-item"><span class="qual-code">BSc (Hons)</span><span class="qual-desc">Psychology</span></div>
-        <div class="qual-item"><span class="qual-code">BABCP</span><span class="qual-desc">Working towards accreditation</span></div>
+      <div class="quals-row">
+        <div class="qual-item"><span class="qual-code">Postgraduate Diploma</span><span class="qual-desc">Cognitive Behavioural Therapy</span></div>
+        <div class="qual-item"><span class="qual-code">Postgraduate Certificate</span><span class="qual-desc">Psychological Wellbeing in Practice</span></div>
+        <div class="qual-item"><span class="qual-code">Bachelor of Science (Honours)</span><span class="qual-desc">Psychology with Criminology</span></div>
       </div>
-      <p class="training-note">Additional training: CBT for Long-Term Health Conditions &middot; CBT for Psychosis &middot; MUSE: Understanding Psychosis and Psychological Therapy.</p>
+      <p class="training-note">Additional training: Cognitive Behavioural Therapy for Long-Term Health Conditions &middot; Managing Unusual Sensory Experiences (MUSE) &middot; SlowMo for psychosis. Continuing professional development on a regular basis.</p>
     </div>
   </section>
 
@@ -248,10 +248,9 @@
   <section class="human-mirror">
     <div class="text-side">
       <span class="eyebrow">A little more human</span>
-      <h2>Therapist, and also a person</h2>
-      <p>I started out in lower-intensity CBT work, and became increasingly interested in not just what someone was experiencing, but what was keeping it going. That curiosity is what pulled me further into CBT, and eventually into work with more complex presentations.</p>
-      <p>Outside of work, I'm creative: I make content, travel when I can, and I'm a bit of a foodie who's always looking for somewhere new to try. Health and wellbeing matter to me too.</p>
-      <p>Having a life outside therapy reminds me of something important: we're all whole people, not a diagnosis.</p>
+      <h2>The person behind the therapist</h2>
+      <p>My journey into CBT has been shaped by a genuine interest in people, their experiences, and understanding why we think, feel and behave the way we do. It's something I've always found fascinating, and it's what continues to inspire the work I do today.</p>
+      <p>Outside of therapy, I love exploring new places, trying new restaurants and getting creative with content creation. I'm also passionate about health and wellbeing, and finding that balance between doing what I love and making time for myself.</p>
       <div class="pullquote"><p>We're all more than our difficult days, and I try to bring that same perspective into the therapy room.</p></div>
     </div>
     <div class="photo-side">
