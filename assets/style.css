@@ -430,14 +430,16 @@
     background:#fff;
     border:1.5px solid var(--line);
     border-radius:var(--radius-md);
-    padding:26px 24px;
+    padding:26px 24px 58px;   /* room at the bottom for the status label */
     position:relative;
   }
+  /* Status label sits at the foot of the card in its own reserved space, so it can never collide with the category tag, however long that is */
   .resource-soon{
-    position:absolute; top:24px; right:22px;
+    position:absolute; bottom:22px; left:24px;
     font-size:var(--fs-label); font-weight:600; color:var(--ink-soft);
     text-transform:uppercase; letter-spacing:var(--track-label);
   }
+  .resource-soon::before{content:""; display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--gold); margin-right:8px; vertical-align:1px;}
   .resource-tag{
     display:inline-block;
     font-size:var(--fs-label);
