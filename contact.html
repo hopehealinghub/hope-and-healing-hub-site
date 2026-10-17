@@ -21,10 +21,10 @@
   }
   .contact-quote-hero .wrap { max-width: 720px; }
   .contact-quote-hero .eyebrow { justify-content: center; }
-  .contact-quote-hero h1 { font-size: clamp(30px, 4.4vw, 46px); margin: 18px 0 10px; }
+  .contact-quote-hero h1 { font-size:var(--fs-h1); margin: 18px 0 10px; }
   .contact-quote-hero .subline {
-    font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500;
-    font-size: 21px; color: var(--gold-deep); margin: 0 0 20px;
+    font-family: 'Playfair Display', serif; font-style: italic; font-weight:500;
+    font-size:var(--fs-hook); color: var(--gold-deep); margin: 0 0 20px;
   }
   .contact-quote-hero p.lead { margin: 0 auto 26px; }
 
@@ -33,28 +33,28 @@
     border: 1.5px solid var(--line); border-radius: var(--radius-md);
     padding: 28px 32px; text-align: left;
   }
-  .reassure-card h3 { margin: 0 0 8px; font-size: 18px; }
-  .reassure-card p { font-size: 14.5px; color: var(--ink-soft); margin: 0 0 14px; }
+  .reassure-card h3 { margin: 0 0 8px; font-size:var(--fs-hook); }
+  .reassure-card p { font-size:var(--fs-sm); color: var(--ink-soft); margin: 0 0 14px; }
   .reassure-example {
     background: var(--sand); border-radius: 12px; padding: 14px 18px;
-    font-style: italic; font-size: 14.5px; color: var(--ink);
+    font-style: italic; font-family:'Playfair Display', serif; font-weight:500; font-size:var(--fs-body); color: var(--ink);
   }
 
   .contact-reach { padding: 56px 0 0; text-align: center; }
   .contact-reach .wrap { max-width: 640px; }
-  .contact-reach p { font-size: 16px; line-height: 1.7; color: var(--ink-soft); }
-  .contact-reach a { color: var(--coral); font-weight: 600; text-decoration: underline; }
+  .contact-reach p { font-size:var(--fs-body); line-height: 1.7; color: var(--ink-soft); }
+  .contact-reach a { color: var(--coral); font-weight:600; text-decoration: underline; }
 
   .contact-form-section { padding-top: 40px; }
   .contact-form-section .wrap { max-width: 640px; }
   .contact-form-section .form-heading { text-align: center; margin-bottom: 32px; }
   .contact-form-section .form-heading h2 { margin: 12px 0 8px; }
-  .contact-form-section .form-heading p { color: var(--ink-soft); font-size: 15px; }
+  .contact-form-section .form-heading p { color: var(--ink-soft); font-size:var(--fs-body); }
   .radio-row { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 6px; }
-  .radio-row label { display: flex; align-items: center; gap: 6px; font-size: 14.5px; font-weight: 500; }
+  .radio-row label { display: flex; align-items: center; gap: 6px; font-size:var(--fs-sm); font-weight:600; }
   .consent-row { display: flex; align-items: flex-start; gap: 10px; margin: 18px 0; }
   .consent-row input { margin-top: 4px; }
-  .consent-row label { font-size: 13px; color: var(--ink-soft); line-height: 1.5; }
+  .consent-row label { font-size:var(--fs-sm); color: var(--ink-soft); line-height: 1.5; }
 
   .step-flow {
     padding: 60px 0;
@@ -88,18 +88,18 @@
     background: #fff; border: 1.5px solid var(--line); text-align: center;
   }
   .step-flip-front .step-num {
-    font-family: 'Playfair Display', serif; font-weight: 500; font-size: 30px;
+    font-family: 'Playfair Display', serif; font-weight:500; font-size:var(--fs-num);
     color: var(--gold-deep); display: block; margin-bottom: 10px;
   }
-  .step-flip-front .step-title { font-weight: 600; font-size: 15px; }
+  .step-flip-front .step-title { font-weight:600; font-size:var(--fs-body); }
   .step-flip-front .step-tap-hint {
-    display: block; margin-top: 14px; font-size: 12px; color: var(--ink-soft);
+    display: block; margin-top: 14px; font-size:var(--fs-label); color: var(--ink-soft);
   }
   .step-flip-back {
     background: #D7E2D8; color: var(--ink); transform: rotateY(180deg);
     text-align: center;
   }
-  .step-flip-back p { font-size: 13.5px; line-height: 1.55; margin: 0; }
+  .step-flip-back p { font-size:var(--fs-sm); line-height: 1.55; margin: 0; }
 
   @media (max-width: 720px) {
     .step-flip-grid { grid-template-columns: repeat(2, 1fr); }
@@ -111,12 +111,12 @@
     border-bottom: 1px solid var(--line); cursor: pointer;
   }
   .faq-q { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 4px; }
-  .faq-q span:first-child { font-weight: 600; font-size: 15.5px; }
+  .faq-q span:first-child { font-weight:600; font-size:var(--fs-body); }
   .faq-chevron { transition: transform 0.2s ease; color: var(--ink-soft); flex-shrink: 0; }
   .faq-item.open .faq-chevron { transform: rotate(180deg); }
   .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.25s ease; }
   .faq-item.open .faq-a { max-height: 200px; }
-  .faq-a p { margin: 0 0 20px; padding: 0 4px; font-size: 14.5px; color: var(--ink-soft); line-height: 1.65; }
+  .faq-a p { margin: 0 0 20px; padding: 0 4px; font-size:var(--fs-sm); color: var(--ink-soft); line-height: 1.65; }
 
   .quiet-crisis-note { padding: 60px 0; }
   .quiet-crisis-note .wrap { max-width: 620px; }
@@ -127,12 +127,12 @@
     padding: 30px 34px;
   }
   .quiet-crisis-note .tag {
-    display: inline-block; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.1em; color: #8C5C93; margin-bottom: 10px;
+    display: inline-block; font-family: 'Inter', sans-serif; font-size:var(--fs-label); font-weight:600;
+    text-transform: uppercase; letter-spacing:var(--track-label); color: #8C5C93; margin-bottom: 10px;
   }
-  .quiet-crisis-note p { font-size: 14.5px; line-height: 1.7; color: var(--ink-soft); margin: 0 0 10px; }
+  .quiet-crisis-note p { font-size:var(--fs-sm); line-height: 1.7; color: var(--ink-soft); margin: 0 0 10px; }
   .quiet-crisis-note p:last-child { margin-bottom: 0; }
-  .quiet-crisis-note a { color: var(--ink); font-weight: 600; }
+  .quiet-crisis-note a { color: var(--ink); font-weight:600; }
 
   .closing-cta {
     padding: 90px 0;
@@ -147,7 +147,7 @@
     opacity: 0.92;
   }
   .closing-cta p.big-quote {
-    font-family: 'Playfair Display', serif; font-style: italic; font-size: 24px;
+    font-family: 'Playfair Display', serif; font-style: italic; font-weight:500; font-size:var(--fs-h2);
     color: var(--ink); margin: 0 0 32px;
   }
 
