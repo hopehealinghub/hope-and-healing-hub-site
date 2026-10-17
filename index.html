@@ -11,6 +11,7 @@
 <link rel="preload" href="assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/fraunces-500.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/style.css">
+<script src="assets/nav.js" defer></script>
 </head>
 <body>
 
@@ -24,6 +25,16 @@
       <a href="contact.html">Contact</a>
     </nav>
     <a href="contact.html" class="nav-cta">Join the waitlist</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span class="bars" aria-hidden="true"><span></span><span></span><span></span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="Mobile">
+      <a class="mm-link" href="about.html">About</a>
+      <a class="mm-link" href="services.html">Services</a>
+      <a class="mm-link" href="resources/index.html">Resources</a>
+      <a class="mm-link" href="contact.html">Contact</a>
+    </nav>
+    <a class="mm-cta" href="contact.html">Join the waitlist</a>
   </div>
 </header>
 
@@ -286,35 +297,6 @@
       front.textContent = thoughts[idx].front;
       back.textContent = thoughts[idx].back;
     }, 150);
-  });
-
-  // Waitlist form: submits to Netlify Forms, then shows the confirmation
-  const form = document.getElementById('contactForm');
-  const formCard = document.getElementById('formCard');
-  const formConfirm = document.getElementById('formConfirm');
-
-  function encodeFormData(formEl){
-    return new URLSearchParams(new FormData(formEl)).toString();
-  }
-
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encodeFormData(form)
-    })
-      .then(() => {
-        formCard.style.display = 'none';
-        formConfirm.style.display = 'block';
-      })
-      .catch(() => {
-        // If the request fails (e.g. running locally, not yet on Netlify),
-        // still show the confirmation so the form doesn't feel broken;
-        // but nothing will actually be captured until this is deployed.
-        formCard.style.display = 'none';
-        formConfirm.style.display = 'block';
-      });
   });
 </script>
 
