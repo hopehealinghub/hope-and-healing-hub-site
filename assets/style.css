@@ -309,6 +309,8 @@
     max-width:640px;
     margin-bottom:56px;
   }
+  /* A heading block that is set to centred text must also sit centred on the page (it is capped at 640px wide, so it needs auto margins) */
+  .section-head[style*="text-align:center"], .section-head[style*="text-align: center"]{margin-left:auto; margin-right:auto;}
   .section-head h2{
     font-size:var(--fs-h2);
     margin-top:16px;
