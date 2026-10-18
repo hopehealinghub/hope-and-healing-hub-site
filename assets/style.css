@@ -1,3 +1,11 @@
+    /* Fonts are served from this site (assets/fonts), not from Google. Only the weights the site uses. */
+  @font-face{font-family:'Playfair Display'; font-style:normal; font-weight:500; font-display:swap; src:url('fonts/playfair-display-latin-500-normal.woff2') format('woff2');}
+  @font-face{font-family:'Inter'; font-style:normal; font-weight:400; font-display:swap; src:url('fonts/inter-latin-400-normal.woff2') format('woff2');}
+  @font-face{font-family:'Inter'; font-style:normal; font-weight:500; font-display:swap; src:url('fonts/inter-latin-500-normal.woff2') format('woff2');}
+  @font-face{font-family:'Inter'; font-style:normal; font-weight:600; font-display:swap; src:url('fonts/inter-latin-600-normal.woff2') format('woff2');}
+  @font-face{font-family:'Inter'; font-style:normal; font-weight:700; font-display:swap; src:url('fonts/inter-latin-700-normal.woff2') format('woff2');}
+  @font-face{font-family:'Inter'; font-style:normal; font-weight:800; font-display:swap; src:url('fonts/inter-latin-800-normal.woff2') format('woff2');}
+
   :root{
     /* ---- Type scale: a few clear sizes, used the same way everywhere ---- */
     --fs-label:12px;                      /* caps labels, tiny print */
@@ -560,6 +568,13 @@
   }
   .b2-text .a{color:#C9B8E8;} .b2-text .b{color:#AFC5B2;} .b2-text .c{color:#E3B8DA;}
   .b2-text .amp{font-weight:500; color:#C9C2D3;}
+  /* the same footer lockup, scaled up about 1.27x, centred inside the dark call-to-action box */
+  .b2--cta{justify-content:center; gap:26px; margin:0 auto 30px;}
+  .b2--cta .b2-arch{width:132px; height:156px;}
+  .b2--cta .b2-emb{left:13px; top:40px; width:108px; height:108px;}
+  .b2--cta .b2-text{font-size:38px;}
+  .b2--cta .b2-rule{background:rgba(243,239,232,0.3);}
+  @media (max-width:560px){ .b2--cta{flex-direction:column; gap:20px;} .b2--cta .b2-rule{display:none;} .b2--cta .b2-text{text-align:center;} }
   .footer-grid p{font-size:var(--fs-sm); max-width:280px;}
   .footer-col h4{
     font-size:var(--fs-label); text-transform:uppercase; letter-spacing:var(--track-label);

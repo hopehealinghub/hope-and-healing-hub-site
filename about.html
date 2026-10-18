@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<title>About Hope | CBT Therapist | The Hope and Healing Hub</title>
-<meta name="description" content="Meet Hope, founder of The Hope and Healing Hub, a Cognitive Behavioural Therapist working towards a space that feels human, accessible and grounded in evidence.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>About Hope | CBT Therapist | The Hope &amp; Healing Hub</title>
+<meta name="description" content="Meet Hope, founder of The Hope &amp; Healing Hub, a Cognitive Behavioural Therapist working towards a space that feels human, accessible and grounded in evidence.">
+<link rel="preload" href="assets/fonts/playfair-display-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/style.css">
 <script src="assets/nav.js" defer></script>
 <style>
@@ -99,7 +98,7 @@
   @media (max-width: 860px) { .quals-row { grid-template-columns: 1fr; gap: 22px; } }
 
   /* ============ A LITTLE MORE HUMAN: mirrored hero, photo on right ============ */
-  .human-mirror { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; min-height: 480px; }
+  .human-mirror { padding: 0; display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; min-height: 480px; }
   .human-mirror .text-side { display: flex; flex-direction: column; justify-content: center; padding: 70px 64px; }
   .human-mirror .text-side h2 { margin-bottom: 18px; }
   .human-mirror .text-side p { font-size:var(--fs-body); line-height: 1.75; color: var(--ink-soft); margin:0 0 16px;}
@@ -108,13 +107,17 @@
     background: linear-gradient(135deg, #EAE0F7, #E4EDE5);
     display: flex; align-items: center; justify-content: center;
   }
-  .human-mirror .photo-placeholder {
-    text-align: center; color: var(--ink-soft); font-size:var(--fs-sm); padding: 32px;
-    border: 1.5px dashed rgba(51,47,59,0.25); border-radius: var(--radius-md); max-width: 260px;
-  }
+  .human-mirror .photo-side img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block; }
   @media (max-width: 860px) {
     .human-mirror { grid-template-columns: 1fr; min-height: 0; }
-    .human-mirror .photo-side { height: 260px; order: -1; }
+    .human-mirror .photo-side { height: 340px; order: -1; }
+    .human-mirror .text-side { padding: 48px 28px; }
+  }
+  /* stack the photo above the text on tablets and phones (a tall, narrow photo strip looked cramped between 861 and 960px) */
+  @media (max-width: 960px) {
+    .human-mirror { grid-template-columns: 1fr; min-height: 0; }
+    .human-mirror .photo-side { height: clamp(340px, 58vw, 520px); order: -1; }
+    .human-mirror .photo-side img { object-position: 50% 14%; }
     .human-mirror .text-side { padding: 48px 28px; }
   }
 </style>
@@ -149,7 +152,7 @@
   <!-- ================= HERO ================= -->
   <section class="editorial-hero">
     <div class="photo-side">
-      <img src="assets/hope-headshot.jpg" alt="Hope, founder and therapist at The Hope and Healing Hub">
+      <img src="assets/hope-headshot.jpg" alt="Hope, founder and therapist at The Hope &amp; Healing Hub">
     </div>
     <div class="text-side">
       <span class="eyebrow">Meet Hope</span>
@@ -254,20 +257,20 @@
       <div class="pullquote"><p>We're all more than our difficult days, and I try to bring that same perspective into the therapy room.</p></div>
     </div>
     <div class="photo-side">
-      <div class="photo-placeholder">A more relaxed, everyday photo of Hope goes here, once one's ready to add.</div>
+      <img src="assets/hope-relaxed.jpg" alt="Hope smiling at a day at the races, in a wide-brimmed black hat with cream flowers" width="1400" height="1217" loading="lazy" decoding="async">
     </div>
   </section>
 
   <!-- ================= CLOSING CTA ================= -->
   <section class="wrap">
     <div class="about-cta">
+      <div class="b2 b2--cta"><div class="b2-arch"><img class="b2-frame" src="assets/b2-frame.svg" alt=""><img class="b2-emb" src="assets/emblem.png" alt=""></div><div class="b2-rule"></div><div class="b2-text"><div><span class="a">h</span>ope</div><div><span class="amp">&amp;</span> <span class="b">h</span>ealing</div><div><span class="c">h</span>ub</div></div></div>
       <h2>Ready when you are</h2>
       <p>You don't have to have everything figured out. You just have to start somewhere.</p>
       <div class="cta-row">
         <a href="index.html#services" class="btn-primary">Explore therapy →</a>
         <a href="contact.html" class="btn-ghost">Get in touch</a>
       </div>
-      <img src="assets/emblem.png" alt="" style="width:64px; height:auto; margin:40px auto 0; opacity:0.85; display:block;" aria-hidden="true">
     </div>
   </section>
 
@@ -294,7 +297,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 The Hope and Healing Hub. All rights reserved.</span>
+      <span>© 2026 The Hope &amp; Healing Hub. All rights reserved.</span>
       <span>If you are in crisis, call 999 or Samaritans, free, on 116 123.</span>
     </div>
   </div>

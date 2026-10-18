@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<title>1:1 CBT Therapy | The Hope and Healing Hub</title>
-<meta name="description" content="1:1 Cognitive Behavioural Therapy with The Hope and Healing Hub. Support for anxiety, low mood, stress, OCD, self-esteem and trauma, online.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>1:1 CBT Therapy | The Hope &amp; Healing Hub</title>
+<meta name="description" content="1:1 Cognitive Behavioural Therapy with The Hope &amp; Healing Hub. Support for anxiety, low mood, stress, OCD, self-esteem and trauma, online.">
+<link rel="preload" href="assets/fonts/playfair-display-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/style.css">
 <script src="assets/nav.js" defer></script>
 <style>
@@ -60,16 +59,6 @@
   /* the heading and note on the dark band need light text (the heading was the same colour as the band, so it could not be seen) */
   .loop-section h2 { color: var(--cream); }
   .loop-section .process-note { color: #D6D0DE; }
-  /* five cards: centre the last row instead of leaving a gap on the right */
-  @media (min-width: 961px) {
-    .services .service-grid { grid-template-columns: repeat(6, 1fr); }
-    .services .service-card { grid-column: span 2; }
-    .services .service-card:nth-child(4) { grid-column: 2 / span 2; }
-    .services .service-card:nth-child(5) { grid-column: 4 / span 2; }
-  }
-  @media (min-width: 721px) and (max-width: 960px) {
-    .services .service-card:last-child { grid-column: 1 / -1; justify-self: center; width: calc(50% - 11px); }
-  }
   @media (max-width: 720px) {
     .familiar-section, .loop-section { padding: 56px 0; }
     .services { padding: 56px 0 64px; }
@@ -107,7 +96,7 @@
   <!-- ================= HERO ================= -->
   <section class="page-hero">
     <div class="wrap">
-      <span class="eyebrow">Therapy at HHH</span>
+      <span class="eyebrow">Therapy at The Hope &amp; Healing Hub</span>
       <h1>Therapy that makes sense in real life</h1>
       <p class="lead">I offer 1:1 cognitive behavioural therapy (CBT), online. It isn't about thinking positively or pretending difficult things aren't difficult. It's about understanding what's happening, spotting the patterns that keep you stuck, and finding practical ways to respond differently.</p>
       <div class="cta-row hero-cta"><a href="#services" class="btn-primary">Explore support ↓</a></div>
@@ -154,6 +143,12 @@
           <h3>Stress &amp; burnout</h3>
           <p class="card-hook">You're doing a lot, but it never feels like enough.</p>
           <p>Constantly switched on with no real recovery makes it hard to know where to start. We'll find what's driving it, then build habits that actually hold.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 6v6c0 5.25 3.75 9.75 9 11 5.25-1.25 9-5.75 9-11V6l-9-4Z"/></svg></div>
+          <h3>Trauma</h3>
+          <p class="card-hook">Something happened, and it still feels present.</p>
+          <p>Difficult experiences can keep shaping how you think and react long after they're over. Therapy creates space to process it at your own pace.</p>
         </div>
         <div class="service-card">
           <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m12 17.3-6.2 3.6 1.6-7-5.4-4.7 7.1-.6L12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7Z"/></svg></div>
@@ -227,7 +222,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 The Hope and Healing Hub. All rights reserved.</span>
+      <span>© 2026 The Hope &amp; Healing Hub. All rights reserved.</span>
       <span>If you are in crisis, call 999 or Samaritans, free, on 116 123.</span>
     </div>
   </div>
